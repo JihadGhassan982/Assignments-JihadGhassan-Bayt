@@ -1,0 +1,517 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Regular";
+  scroll-behavior: smooth;
+}
+
+/*navbar styles*/
+.talentera-nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #000;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+/* navbar links container - separates home link from other links */
+.talentera-nav .navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* other links */
+.talentera-nav__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+/* home page link */
+.talentera-nav__links--home-link {
+  background-color: #009688;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+}
+/* home icon */
+.talentera-nav__links--home-link i {
+  font-size: 12px;
+}
+/* nav link styles */
+.talentera-nav__links--link {
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+}
+.talentera-nav__links--link:hover {
+  color: #009688;
+}
+/* dropdown styles */
+.talentera-nav__links--dropdown {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  padding: 0 10px;
+}
+.talentera-nav__links--dropdown:hover {
+  color: #009688;
+}
+.talentera-nav__links .dropdown-links {
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #000;
+  transition: all 0.4s ease-in-out;
+  padding: 0 10px;
+}
+.talentera-nav__links .talentera-nav__links--dropdown:hover > .dropdown-links {
+  max-height: 200px;
+  transition: all 0.4s ease-in-out;
+}
+.talentera-nav__links .dropdown-link {
+  color: #fff;
+  margin: 10px;
+  text-decoration: none;
+}
+.talentera-nav__links .dropdown-link:hover {
+  color: #009688;
+}
+/* navbar options - search and mobile menu styles */
+.talentera-nav__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.talentera-nav__options--menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+.talentera-nav__options--menu:hover {
+  color: #009688;
+}
+.talentera-nav__options--menu:focus,
+.talentera-nav__options--menu :focus-visible,
+.talentera-nav__options--menu :hover {
+  outline: none;
+}
+.talentera-nav__options--search {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.talentera-nav__options--search:hover {
+  color: #009688;
+}
+.talentera-nav__options--search:focus,
+.talentera-nav__options--search :focus-visible,
+.talentera-nav__options--search :hover {
+  outline: none;
+}
+
+/*Header Styles*/
+.talentera-header {
+  width: 100%;
+  position: relative;
+}
+.talentera-header__title {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+/* header background */
+.talentera-header__bg {
+  width: 100%;
+  object-fit: fill;
+}
+
+/*Our Team Styles*/
+.talentera-team {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 50px 0;
+  gap: 40px;
+}
+/* top section - our team */
+.talentera-team__heading {
+  text-align: center;
+}
+.talentera-team__heading--title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.talentera-team__heading--desc {
+  font-weight: 500;
+  margin-top: 20px;
+}
+/* team images container */
+.talentera-team__team {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* single team meber styles */
+.talentera-team__team--member {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.talentera-team__team .member-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.talentera-team__team .member-name {
+  font-size: 23px;
+}
+
+/*Our work section styles*/
+.talentera-work {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #333333;
+  padding: 50px 10px;
+}
+/* work summary styles */
+.talentera-work__summary {
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+}
+.talentera-work__summary--title {
+  color: #fff;
+  font-size: 30px;
+}
+.talentera-work__summary--desc {
+  color: #fff;
+}
+/* work card styles */
+.talentera-work__card {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+}
+.talentera-work__card--image {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.talentera-work__card--info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  gap: 10px;
+}
+.talentera-work__card .work-card-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+.talentera-work__card .work-card-trade, .talentera-work__card .work-card-extras-text {
+  font-weight: 500;
+}
+.talentera-work__card .work-card-extras {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*Contact Us section*/
+.talentera-contact-us {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F0F0F0;
+  padding: 50px 10px;
+  position: relative;
+
+}
+/* circle add call to action */
+.talentera-contact-us__add-btn {
+  position: absolute;
+  top: -25px;
+  right: 10px;
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+/* contact info styles */
+.talentera-contact-us__contact-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 10px;
+}
+.talentera-contact-us__contact-info--title {
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-color: #009688;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+.talentera-contact-us__contact-info--address {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.talentera-contact-us__contact-info--contact-info:last-child i {
+  font-size: 20px;
+}
+.talentera-contact-us__contact-info--contact-info i {
+  color: #009688;
+}
+/* contact form styles */
+.talentera-contact-us__contact-form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0 #7d7d7d;
+  gap: 20px;
+}
+/* label + input conatiner styles */
+.talentera-contact-us__contact-form--field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.talentera-contact-us__contact-form .contact-field-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+.talentera-contact-us__contact-form .contact-field-input:hover, .talentera-contact-us__contact-form :focus, .talentera-contact-us__contact-form :focus-visible, .talentera-contact-us__contact-form :focus-within {
+  outline: none;
+}
+.talentera-contact-us__contact-form .contact-field-input {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid rgba(125, 125, 125, 0.3882352941);
+}
+/* TOS and submit button styles */
+.talentera-contact-us__contact-form--submit {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.talentera-contact-us__contact-form .tos-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.talentera-contact-us__contact-form .contact-form-submit {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+/* An unknown / undefined image  */
+.talentera-contact-us__some-image {
+  width: 20px;
+  height: 20px;
+}
+/* scroll to top call to action */
+.talentera-contact-us__scroll-to-top {
+  position: fixed;
+  right: 10px;
+  top: 77vh;
+  background-color: #000;
+  border: none;
+  font-size: 20px;
+  padding: 15px;
+  color: #fff;
+}
+/* footer styles */
+.talentera-contact-us__footer {
+  width: 100%;
+  background-color: #000;
+  padding: 40px;
+}
+/* social links/ icons styles */
+.talentera-contact-us__footer--social-links {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* follow us text - noticed that it has a slight margin-left */
+.talentera-contact-us__footer .social-title {
+  color: #fff;
+  font-size: 17px;
+  margin-left: 45px;
+}
+.talentera-contact-us__footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.talentera-contact-us__footer .social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #009688;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+/* I noticed that the G+ icon is a bit bigger than others */
+.talentera-contact-us__footer .slightly-bigger {
+  width: 50px;
+  height: 40px;
+  font-size: 18px;
+}
+
+/* media query - tablets & medium screens*/
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  /*work card image - tablet*/
+  .talentera-work__card--image {
+    height: 180px;
+  }
+  /*scroll to top - tablet*/
+  /* you can find the section and it's responsive design snippet right below it. */
+  .talentera-contact-us__scroll-to-top {
+    top: 82vh;
+  }
+}
+/* media query - phones & small tablets*/
+/* you can find the section and it's responsive design snippet right below it. */
+@media screen and (max-width: 768px) {
+  /*Navbar responsive styles*/
+  .navbar-links {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: column !important;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  .show-nav-links {
+    max-height: 800px;
+    overflow: visible;
+    transition: all 0.4s ease-in-out;
+  }
+  .talentera-nav__links--link {
+    justify-content: center;
+  }
+  .talentera-nav__links--dropdown {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  .talentera-nav__options--search {
+    display: none;
+  }
+  .talentera-nav__options--menu {
+    display: block;
+  }
+  .talentera-nav__options--menu:hover {
+    color: #fff;
+  }
+  /*header responsive styles*/
+  .talentera-header {
+    height: 30vh;
+  }
+  .talentera-header__title {
+    bottom: 20px;
+  }
+  .talentera-header__bg {
+    width: 100%;
+    object-fit: fill;
+    height: 100%;
+  }
+  /*team section responsive*/
+  .talentera-team__team--member {
+    width: 100%;
+  }
+  .talentera-team__team {
+    gap: 10px;
+  }
+  /*responsive work style*/
+  .talentera-work__summary {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .talentera-work__card {
+    width: 100%;
+  }
+  /*conatct form responsive style*/
+  .talentera-contact-us {
+    flex-direction: column;
+  }
+  .talentera-contact-us__contact-info {
+    width: 100%;
+    padding: 10px;
+  }
+  .talentera-contact-us__contact-form {
+    width: 100%;
+  }
+  /* scroll to top styles */
+  .talentera-contact-us__scroll-to-top{
+    top: 79vh;
+  }
+  /*footer responsive design*/
+  .talentera-contact-us__footer .social-icon:last-child {
+    display: none;
+  }
+}
