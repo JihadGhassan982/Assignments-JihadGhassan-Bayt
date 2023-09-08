@@ -447,7 +447,6 @@
   }
   .show-nav-links {
     max-height: 800px;
-    overflow: visible;
     transition: all 0.4s ease-in-out;
   }
   .talentera-nav__links--link {
