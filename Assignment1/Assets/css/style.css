@@ -382,7 +382,7 @@
 }
 /* social links/ icons styles */
 .talentera-contact-us__footer--social-links {
-  width: 40%;
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -394,7 +394,7 @@
 .talentera-contact-us__footer .social-title {
   color: #fff;
   font-size: 17px;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 .talentera-contact-us__footer .social-icons {
   display: flex;
